@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Search Engine Threat model'
+project = 'Search engine threat model'
 copyright = '2022, Ty Myrddin'
 author = 'Ty Myrddin'
 

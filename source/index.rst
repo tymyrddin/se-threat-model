@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Search engine Threat model
+Search engine threat model
 ======================================================
 
 (Attacker-centric) organising thoughts and connections on two targets which are intertwined as many of the blackhat SEO techniques can
