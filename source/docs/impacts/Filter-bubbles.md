@@ -24,12 +24,12 @@ A filter bubble is a state of intellectual isolation: People living in a filter 
 
 Sites and applications using these algorithms want us to want them, and take advantage of our natural tendencies to reward us with things (venues, products, opinions) we find comfortable, yet are not always useful or in our best interests. This filtering is happening without our knowledge (and awareness) of how it works. We are giving away our power of self-determination to service providers. Executives at Google could easily have been flipping elections to their liking with no one having any idea what is happening, and Cambridge Analytica(s) actually did so on facebook.
 
-## Possible mitigations
+## Known mitigations
 
 * Almost no one clicks down through many pages of search engine listings in order to find alternative content.
     * Any ranking algorithm can be adapted to produce a first page listing of results with more than just the most popular objects.
     * Or, simply provide results based only on keywords, without any automated “personalisation” or “tailoring” of results and providing a “DIY tailoring of search results” menu to users.
 * Algorithms can also be used to guard content quality (although there are some dangers to that also).
 * Key to reducing the negative impact of the filter bubble is transparency, more public awareness of how the algorithms work.
-* Education: Maybe fun games that demonstrate (effects of) bubbles and the resulting bias?
+* Education: Maybe we can try that demonstrate (effects of) bubbles and the resulting bias?
 
