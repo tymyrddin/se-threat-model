@@ -60,6 +60,7 @@ search engines and their users.
    docs/impacts/*
 
 .. toctree::
-   :caption: All threat models
+   :caption: Links
 
-   Overview <https://tymyrddin.github.io/threat-models/>
+   Overview threat models <https://tymyrddin.github.io/threat-models/>
+   Attack trees <https://tymyrddin.github.io/attack-trees/>
