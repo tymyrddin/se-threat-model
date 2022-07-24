@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link farms &mdash; SE Threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Misconfigurations" href="Misconfigurations.html" />
+    <link rel="prev" title="Indirect link spamming" href="Indirect-link-spamming.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Search engine threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Big-search-engines.html">Big search engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-hat-SEO.html">Black hat SEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/The-usual-suspects.html">The usual suspects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Documents.html">Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Index.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Search-terms.html">Search terms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Article-spinning.html">Article spinning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blog-networks.html">Blog networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cloaking.html">Cloaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Doorway-pages.html">Doorway pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Indirect-link-spamming.html">Indirect link spamming</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Link farms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Misconfigurations.html">Misconfigurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Redirection.html">Redirection</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Content-spamming.html">Content spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Information-gathering.html">Information gathering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Link-spamming.html">Link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Man-in-the-Middle-attack.html">Man-in-the-Middle attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Rank-fraud.html">Rank fraud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Search-engine-poisoning.html">Search engine poisoning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Exposure-to-malware.html">Exposure to malware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Filter-bubbles.html">Filter bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/GDPR-non-compliance.html">GDPR non-compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Information-exposure.html">Information exposure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Filter-bubbles.html">↑ Filter bubbles ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Malware-proliferation.html">↑ Malware proliferation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Oil-of-the-twenty-first-century-and-Competition.html">↑ Oil of the twenty-first century and ↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Spam-content.html">↑ Spam content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Search engine threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Link farms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/attack-vectors/Link-farms.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="link-farms">
+<h1>Link farms<a class="headerlink" href="#link-farms" title="Permalink to this heading"></a></h1>
+<p>Link farms are connected networks of sites (cliques) linking to each other for gaming search engine ranking algorithms.</p>
+<section id="evolution">
+<h2>Evolution<a class="headerlink" href="#evolution" title="Permalink to this heading"></a></h2>
+<p>Link farms were developed by search engine optimizers in 1999 to take advantage of the Inktomi search engine’s dependence on link popularity. Inktomi was targeted for manipulation through link farms because it was then used by several independent but popular search engines. Link farm exchanges at the time were merely informal agreements and because there was money to be made, several companies appeared offering automated registration, categorisation, and link page updates to “member web sites”. The Inktomi engine maintained two indexes. Search results were produced from the primary index which was a limited list. Pages with few inbound links fell out of the Inktomi index on a monthly basis. Yahoo was Inktomi’s biggest customer and began complaining because when you typed “Yahoo” they were not number one in their own search results. It was dubbed “the relevancy problem”.</p>
+<p>Inktomi then tried to build a tool to “measure the relevance effect of algorithmic changes based on precomputed human judgements” giving a score between 1 and 10. Meanwhile, Google’s ranking algorithm depended in part on a link-weighting scheme called PageRank. The PageRank algorithm determines that some links may be more valuable than others, and therefore assigns them more weight than others.</p>
+<p>Ah, and there is money to be made. The early link farms were vulnerable to manipulation by webmasters who joined the services, received inbound linkage, and then found ways to hide their outbound links or to avoid posting any links on their sites at all. Link farm managers had to implement techniques to guard “fairness”.</p>
+<p>Blackhat SEO link farm products appeared, in particular link-finding software that identified potential reciprocal link partners, sent them template-based emails offering to exchange links or to place articles on their sites (with (hidden) links), and created directory-like link pages for its “members”, for building their link popularity and PageRank “position”.</p>
+</section>
+<section id="known-mitigations">
+<h2>Known mitigations<a class="headerlink" href="#known-mitigations" title="Permalink to this heading"></a></h2>
+<p>Search engines countered by identifying specific attributes associated with link farm pages and filtering those pages from indexing and search results. In some cases, entire domains were removed from the search engine indexes in order to prevent them from influencing search results. In February 2011, Google launched Google Panda, intended to improve its spam-detection algorithm.</p>
+<p>Panda “scores” websites on their content and user-experience to reduce the prominence of websites which have ‘thin’, low quality and duplicate content. It also targets sites which come up short on other site-quality metrics, e.g. high advert-to-content ratios. Panda benefited sites with lots of “high-quality and unique” content and which had recognised and trusted brands, thereby favouring corporate interests over purely informative content.</p>
+<p>The Google Panda patent (<a class="reference external" href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=1&amp;f=G&amp;l=50&amp;d=PALL&amp;S1=08682892&amp;OS=PN/08682892&amp;RS=PN/08682892">US Patent 8,682,892, USPTO, 2014</a>), filed on September 28, 2012, was granted on March 25, 2014. The patent states that Google Panda creates a ratio with a site’s inbound links and reference queries, search queries for the site’s brand. That ratio is then used to create a site wide modification factor. The site wide modification factor is then used to create a modification factor for a page based upon a search query. If the page fails to meet a certain threshold, the modification factor is applied and, therefore, the page would rank lower in the search engine results page.</p>
+<section id="pagerank">
+<h3>PageRank<a class="headerlink" href="#pagerank" title="Permalink to this heading"></a></h3>
+<p>PageRank, developed by Larry Page and Sergey Brin, is one of the most widely used page ranking algorithms and is based on the idea of a ’random surfer’. The possibility for a web page to be clicked is determined by:</p>
+<ul class="simple">
+<li><p>The original importance of the webpage</p></li>
+<li><p>The total number of web pages that link to it</p></li>
+<li><p>The importance and the forward link number of each of these web pages.</p></li>
+</ul>
+<p>If a page has important links to it, its links to other pages also become important. Therefore, PageRank takes the backlinks into account and propagates the ranking through links: a page has a high rank if the sum of the ranks of its backlinks is high.</p>
+<p>Pages are seen as Markov Chain states and the probability for moving from a page to another page is modelled as a state transition probability. The output of the algorithm is a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page. PageRank can be calculated for collections of documents of any size. It is assumed in several research papers that the distribution is evenly divided among all documents in the collection at the beginning of the computational process. The computations require several passes (iterations) through the collection to adjust approximate PageRank values to more closely reflect the theoretical true value.</p>
+<p>In practice, the PageRank concept is vulnerable to:</p>
+<ul class="simple">
+<li><p>Black SEO (adding hidden anchor tags to a site and using link farms and hijacked blogs) because one page is important if it is pointed to by many other pages and it is based on link structure</p></li>
+<li><p>Spamming and fake news because it does not distinguish between good and bad authorities.</p></li>
+</ul>
+</section>
+<section id="trustrank-and-anti-trustrank">
+<h3>TrustRank and Anti-TrustRank<a class="headerlink" href="#trustrank-and-anti-trustrank" title="Permalink to this heading"></a></h3>
+<p>TrustRank can be added to PageRank. Instead of relying on only the number of web links from one page to another it then also uses the variable “trust” it has in an object it is linked to. TrustRank generates trust for all indexed objects and gives objects with a lot of spam content a much smaller score while giving sites which link to trusted authorities a higher score. This prevents cascades of fake news to build up while also penalizing dirty tricks for SEO.</p>
+<p>TrustRank selects a small set of seed pages to be evaluated by an expert. Once the reputable seed pages are manually identified, a crawl extending outward from the seed set seeks out similarly reliable and trustworthy pages.</p>
+<ul class="simple">
+<li><p>TrustRank’s reliability diminishes with increased distance between documents and seed set.</p></li>
+<li><p>The inverse logic also works (Anti-TrustRank). The closer a site is to spam resources, the more likely it is to be spam as well.</p></li>
+<li><p>The researchers who proposed the TrustRank approach have continued to refine their work by evaluating related topics, such as measuring spam mass (the measure of the impact of link spamming on a page’s ranking).</p></li>
+<li><p>So have others. There is now a fast asynchronous Anti-TrustRank algorithm.</p></li>
+<li><p>It is important to select good seeds in the Anti-TrustRank algorithm since the ATR scores are propagated from the selected seeds.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Indirect-link-spamming.html" class="btn btn-neutral float-left" title="Indirect link spamming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Misconfigurations.html" class="btn btn-neutral float-right" title="Misconfigurations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

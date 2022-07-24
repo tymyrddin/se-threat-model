@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doorway pages &mdash; SE Threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Indirect link spamming" href="Indirect-link-spamming.html" />
+    <link rel="prev" title="Cloaking" href="Cloaking.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Search engine threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Big-search-engines.html">Big search engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-hat-SEO.html">Black hat SEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/The-usual-suspects.html">The usual suspects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Documents.html">Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Index.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Search-terms.html">Search terms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Article-spinning.html">Article spinning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blog-networks.html">Blog networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cloaking.html">Cloaking</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Doorway pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Indirect-link-spamming.html">Indirect link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Link-farms.html">Link farms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Misconfigurations.html">Misconfigurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Redirection.html">Redirection</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Content-spamming.html">Content spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Information-gathering.html">Information gathering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Link-spamming.html">Link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Man-in-the-Middle-attack.html">Man-in-the-Middle attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Rank-fraud.html">Rank fraud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Search-engine-poisoning.html">Search engine poisoning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Exposure-to-malware.html">Exposure to malware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Filter-bubbles.html">Filter bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/GDPR-non-compliance.html">GDPR non-compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Information-exposure.html">Information exposure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Filter-bubbles.html">↑ Filter bubbles ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Malware-proliferation.html">↑ Malware proliferation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Oil-of-the-twenty-first-century-and-Competition.html">↑ Oil of the twenty-first century and ↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Spam-content.html">↑ Spam content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Search engine threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Doorway pages</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/attack-vectors/Doorway-pages.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="doorway-pages">
+<h1>Doorway pages<a class="headerlink" href="#doorway-pages" title="Permalink to this heading"></a></h1>
+<p>Doorway pages (alias SEO poisoned pages, bridge pages, portal pages, jump pages, gateway pages, entry pages) are keyword­-stuffed pages designed to rank highly in search engine results and redirect users to a rogue site. Such doorway pages can easily be generated and managed with a so-called SEO kit.</p>
+<ul class="simple">
+<li><p>The attackers often use holidays and other timely occasions that are likely to generate a lot of search interest, such as elections.</p></li>
+<li><p>By hosting <a class="reference internal" href="../attacks/Search-engine-poisoning.html"><span class="doc std std-doc">search engine poisoning</span></a> within a legitimate site, the attackers can piggyback on the reputation of that site, making it harder for the search engines to identify and remove the rogue links. To upload to the legitimate site vulnerabilities in content management system or hosting web server are used.</p></li>
+<li><p>Doorway pages are generated dynamically (often by Perl or PHP scripts) and extract text from search results from any major search engine. The latest “hot” keywords can be found in resources like Google Trends. Metadata is extracted from the search engine results and added to the links on doorway pages. The generated content can also be cached by the SEO kit.</p></li>
+<li><p>The doorway page links to other doorway pages so they’ll be indexed, and/or links to the doorway pages that are posted on other legitimate web sites in forums, blog comments sections, guest books, social networking status updates, and so forth. This gets the pages indexed by the search engine crawlers.</p></li>
+<li><p>If a searcher clicks on a typical doorway page link from a search engine results page, in most cases they will be redirected to another page by a fast Meta refresh command, JavaScript and server side redirection, from the <a class="reference internal" href="Misconfigurations.html"><span class="doc std std-doc">server configuration file</span></a>, or simply by tricking the visitor into clicking on a link to get them to the desired destination page.</p></li>
+</ul>
+<section id="false-positives">
+<h2>False positives<a class="headerlink" href="#false-positives" title="Permalink to this heading"></a></h2>
+<p>Landing pages are regularly misconstrued to equate to Doorway pages within the literature. These are content rich pages designed to redirect traffic within the context of pay-per-click campaigns and to maximize SEO campaigns.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Cloaking.html" class="btn btn-neutral float-left" title="Cloaking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Indirect-link-spamming.html" class="btn btn-neutral float-right" title="Indirect link spamming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

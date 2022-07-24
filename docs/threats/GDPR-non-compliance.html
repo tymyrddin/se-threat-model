@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GDPR non-compliance &mdash; SE Threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Information exposure" href="Information-exposure.html" />
+    <link rel="prev" title="Filter bubbles" href="Filter-bubbles.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Search engine threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Big-search-engines.html">Big search engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-hat-SEO.html">Black hat SEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/The-usual-suspects.html">The usual suspects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Documents.html">Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Index.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Search-terms.html">Search terms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Article-spinning.html">Article spinning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Blog-networks.html">Blog networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Cloaking.html">Cloaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Doorway-pages.html">Doorway pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Indirect-link-spamming.html">Indirect link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Link-farms.html">Link farms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Misconfigurations.html">Misconfigurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Redirection.html">Redirection</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Content-spamming.html">Content spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Information-gathering.html">Information gathering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Link-spamming.html">Link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Man-in-the-Middle-attack.html">Man-in-the-Middle attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Rank-fraud.html">Rank fraud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Search-engine-poisoning.html">Search engine poisoning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Exposure-to-malware.html">Exposure to malware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filter-bubbles.html">Filter bubbles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GDPR non-compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Information-exposure.html">Information exposure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Filter-bubbles.html">↑ Filter bubbles ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Malware-proliferation.html">↑ Malware proliferation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Oil-of-the-twenty-first-century-and-Competition.html">↑ Oil of the twenty-first century and ↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Spam-content.html">↑ Spam content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Search engine threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>GDPR non-compliance</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/threats/GDPR-non-compliance.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gdpr-non-compliance">
+<h1>GDPR non-compliance<a class="headerlink" href="#gdpr-non-compliance" title="Permalink to this heading"></a></h1>
+<p>The General Data Protection Regulation (GDPR, 2018), which applies to all EU member states (and all organisations using EU citizens’ personal data) replaced the 1995 Directive on 25 May 2018.</p>
+<ul class="simple">
+<li><p>The GDPR applies to all data, both structured and unstructured content.</p></li>
+<li><p>A search engine is a “controller” of personal data.</p></li>
+<li><p>Indexing information by a search engine is “processing of personal data”.</p></li>
+<li><p>The GDPR is applicable, even if indexing happens outside of the EU.</p></li>
+</ul>
+<section id="gdpr-compliance">
+<h2>GDPR compliance<a class="headerlink" href="#gdpr-compliance" title="Permalink to this heading"></a></h2>
+<section id="in-general">
+<h3>In general<a class="headerlink" href="#in-general" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Requests must be dealt with within one month.</p></li>
+<li><p>The time to respond can be extended by two months if the request is complex or the data controller has received a number of requests from the individual.</p></li>
+<li><p>The GDPR does not specify how to make a valid requests. It can be verbally or in writing, it can be made to any part of an organisation (including by social media) and does not have to be to a specific person or contact point. And as long as it is clear what a person is asking for, it does not have to include phrases such as “Article 15” or “access request”.</p></li>
+<li><p>When having doubts about the identity of the person making the request, a controller can ask for more information that is necessary to confirm who the person is. The key to this is proportionality, taking into account what the request is for, the nature of the held data, and what it is being used for.</p></li>
+</ul>
+</section>
+<section id="right-to-be-informed-privacy-policy">
+<h3>Right to be informed (privacy policy)<a class="headerlink" href="#right-to-be-informed-privacy-policy" title="Permalink to this heading"></a></h3>
+<p>Anyone has the right to be informed about how their data is processed. This is designed to ensure transparency over how personal data is used, and an obligation to provide “fair processing information” and includes the purposes for processing their personal data, retention periods for that personal data, and who it will be shared with.</p>
+<ul class="simple">
+<li><p>This information must be provided at the time the personal data is collected. If and when personal data is obtained from other sources, individuals must be provided with the within a reasonable period of obtaining the data and no later than one month.</p></li>
+<li><p>If an individual already has the information or if it would involve a disproportionate effort to provide it to them, the information does not need to be provided.</p></li>
+<li><p>The information must be concise, transparent, intelligible, easily accessible, and it must use clear and plain language.</p></li>
+<li><p>Typically search engines websites include this in their terms of use or privacy policy. Most private search engines are already open about their data collection and use. In most cases, it is very limited.</p></li>
+<li><p>If possible, provide privacy information to people using a combination of different techniques including layering, dashboards, just-in-time notices, icons, and mobile and smart device functionalities. Test it with some real users.</p></li>
+<li><p>Review and update the privacy information regularly and bring any new uses of personal data to individuals affected before processing starts.</p></li>
+</ul>
+</section>
+<section id="right-of-access">
+<h3>Right of access<a class="headerlink" href="#right-of-access" title="Permalink to this heading"></a></h3>
+<p>Users can request confirmation from search engines about whether their data is being collected and have the right to obtain the following: confirmation that their personal data is being processed, a copy of it and other supplementary information (the purposes of the processing, the categories of personal data concerned, the recipients or categories of recipient the personal data is disclosed to,retention period for storing the personal data or, where this is not possible, criteria for determining how long it will be stored, the existence of their right to request rectification, erasure or restriction or to object to such processing, the right to lodge a complaint with the ICO or another supervisory authority, information about the source of the data, where it was not obtained directly from the individual, the existence of any automated decision-making (including profiling), and the safeguards provided if personal data is transferred to a third country or international organisation).</p>
+<ul class="simple">
+<li><p>Private search engines (and their users) typically have very little information to share in the first place. Internet search engines however, do.</p></li>
+</ul>
+</section>
+<section id="right-to-rectification">
+<h3>Right to rectification<a class="headerlink" href="#right-to-rectification" title="Permalink to this heading"></a></h3>
+<p>An important one. The ability to rectify incomplete or incorrect data is important in combating incorrect data profiling. Prior, user data was often out of their control and could lead to losing out on jobs, loans, etc. People can ask to have their information corrected or completed. The data gatherer is then responsible for passing the corrected information to any third-parties they previously shared data with.</p>
+<ul class="simple">
+<li><p>The GDPR does not give a definition of the term accuracy. However, the Data Protection Act 2018 (DPA 2018) states that personal data is inaccurate if it is incorrect or misleading as to any matter of fact. Determining whether personal data is inaccurate can be more complex if the data refers to a mistake that has subsequently been resolved. It is also complex if the data in question records an opinion. Opinions are, by their very nature, subjective, and it can be difficult to conclude that the record of an opinion is inaccurate.</p></li>
+<li><p>Under Article 18 an individual has the right to request restriction of the processing of their personal data where they contest its accuracy and a controller is checking it.</p></li>
+<li><p>It is possible for a data controller to refuse to comply with a request for rectification if the request is manifestly unfounded or excessive, taking into account whether the request is repetitive in nature. In which case, the person that requested rectification must be informed without undue delay and within one month of receipt of the request about the reasons for not taking action, their right to make a complaint to the ICO or another supervisory authority and their ability to seek to enforce this right through a judicial remedy.</p></li>
+</ul>
+</section>
+<section id="right-to-erasure">
+<h3>Right to erasure<a class="headerlink" href="#right-to-erasure" title="Permalink to this heading"></a></h3>
+<p>Users have the right to request that their information is deleted, if there is no longer a reason for it to be stored. This isn’t a complete “right to be forgotten”, but it does provide protection from outdated information staying on the internet. The right to erasure leads to allowing individuals to have information, videos, or photographs about themselves deleted from certain internet records so that they cannot be found by search engines. The right is not absolute and only applies in certain circumstances, but it is not the only way in which the GDPR places an obligation on controllers to consider whether to delete personal data.</p>
+<ul class="simple">
+<li><p>In the case of search engines, individuals have the right to have their personal data erased if</p>
+<ul>
+<li><p>a search engine is relying on legitimate interests as its basis for processing, the individual objects to the processing of their data, and there is no overriding legitimate interest to continue this processing.</p></li>
+<li><p>processing the personal data is done for direct marketing purposes and the individual objects to that processing.</p></li>
+</ul>
+</li>
+<li><p>The GDPR requires that controllers can accurately and completely identify a person’s information across the entire organisation so that the information of a natural person can be fully removed when they want the information erased. In which case a NLP based private search engine can be quite handy to have.</p></li>
+</ul>
+</section>
+<section id="right-to-restrict-processing">
+<h3>Right to restrict processing<a class="headerlink" href="#right-to-restrict-processing" title="Permalink to this heading"></a></h3>
+<p>The Right to Restrict Processing gives natural persons the right to request the restriction or suppression of their personal data. While the groups storing information can continue to store it, they are no longer permitted to process that data. This is an alternative to requesting the erasure of data. And although this is distinct from the right to rectification and the right to object, there are close links between those rights and the right to restrict processing because the person putting in the request can ask for restriction of processing while their other request is being considered.</p>
+<ul class="simple">
+<li><p>The GDPR suggests a number of different methods that could be used to restrict data, such as temporarily moving the data to another processing system, making the data unavailable to users or temporarily removing published data from a website. Only the latter two make sense in the context of search engines.</p></li>
+</ul>
+</section>
+<section id="right-to-data-portability">
+<h3>Right to data portability<a class="headerlink" href="#right-to-data-portability" title="Permalink to this heading"></a></h3>
+<p>The right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services. The risk of lock-in is still the norm rather than the exception when it comes to online platforms. Many companies strive for a competitive edge by exclusively collecting and processing data and keep their systems closed. The main goal of this regulation is to give data subjects more control over their personal data and to increase user choice of online services.</p>
+<ul class="simple">
+<li><p>The right to data portability only applies to personal data. This means that it does not apply to genuinely anonymous data. However, pseudonymous data that can be clearly linked back to an individual (where that individual provides the respective identifier) is within scope of the right.</p></li>
+<li><p>Sometimes the personal data an individual has provided is easy to identify. In other cases less so. It includes personal data resulting from observation of an individual’s activities (like where using a device or service), history of website usage or search activities, traffic and location data, or ‘raw’ data processed by connected objects such as smart meters and wearable devices.</p></li>
+<li><p>It does not include any additional data created based on the data an individual has provided. For example, if the data provided was used to create a user profile then this data would not be in scope of data portability.</p></li>
+<li><p>If the requested information includes information about others (third party data) a controller needs to consider whether transmitting that data would adversely affect the rights and freedoms of such third parties.</p></li>
+<li><p>Individuals have the right to ask a controller to transmit their personal data directly to another controller, without the controller putting into place legal, technical or financial obstacles which slow down or prevent the transmission of the personal data. And there may be legitimate reasons why the transmission can not be done such as that it would adversely affect the rights and freedoms of others.</p></li>
+<li><p>It is recommended to provide personal data using open formats such as CSV, XML and JSON.</p></li>
+</ul>
+</section>
+<section id="right-to-object">
+<h3>Right to object<a class="headerlink" href="#right-to-object" title="Permalink to this heading"></a></h3>
+<p>Natural persons are permitted to opt-out of having their data processed. If data processors do not have a legitimate and compelling reason to process and individual’s data, users can object for any number of reasons. Search engines rarely have a legitimate and compelling reason to process individual’s data. Delivering positive user experiences does not need to come at the expense of privacy.</p>
+<ul class="simple">
+<li><p>Individuals have an absolute right to object to the processing of their personal data if it is for direct marketing purposes.</p></li>
+<li><p>The right to object is not absolute when the processing is for a task carried out in the public interest, the exercise of official authority or legitimate interests (or those of a third party). When processing data for scientific or historical research, or statistical purposes, the right to object is also more limited.</p></li>
+</ul>
+</section>
+<section id="rights-related-to-automated-decision-making-including-profiling">
+<h3>Rights related to automated decision making including profiling<a class="headerlink" href="#rights-related-to-automated-decision-making-including-profiling" title="Permalink to this heading"></a></h3>
+<p>There is very little transparency in automated decision making based on data profiles. Users will be able to request answers. Not all automated individual decision-making involves profiling. The GDPR applies to all automated individual decision-making (making a decision solely by automated means without any human involvement) and profiling (automated processing of personal data to evaluate certain things about an individual). This type of decision-making is only allowed when it is:</p>
+<ul class="simple">
+<li><p>necessary for the entry into or performance of a contract</p></li>
+<li><p>authorised by Union or Member state law applicable to the controller</p></li>
+<li><p>based on an individual’s explicit consent</p></li>
+</ul>
+<p>Where one of these grounds applies, additional safeguards to protect individuals must be in place. These work in a similar way to existing rights under the 1998 Data Protection Act. Article 13 also states that data subjects have the right to explanation of the logic involved.</p>
+<p>In short, the GDPR does not forbid profiling. It requires the transparency of all operations, appropriate statistical procedures and accuracy of data. And a strong emphasis is placed on the right to opt out. Which is something the GDPR enforces in all areas where consent is involved, not just profiling.</p>
+</section>
+<section id="compliance">
+<h3>Compliance<a class="headerlink" href="#compliance" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p><em>Ingest all structured and unstructured information from the entire corpus and search it all for Personally identifiable information (PII) using NLP techniques and tools. The presence of PII cannot be determined by a single approach, but rather by the combined effort of multiple approaches, using contexts, tags, character patterns, dictionaries, B-tree indexes, n-grams and regular expressions, oh, and training spell checkers on specific contexts. Use structured and unstructured signals with machine learning to match person records from across the multiple sources. De-anonymise, re-identify, for the purpose of being able to remove/suppress/transmit the associated data!</em></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Filter-bubbles.html" class="btn btn-neutral float-left" title="Filter bubbles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Information-exposure.html" class="btn btn-neutral float-right" title="Information exposure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

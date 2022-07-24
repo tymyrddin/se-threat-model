@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Man-in-the-Middle attack &mdash; SE Threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Rank fraud" href="Rank-fraud.html" />
+    <link rel="prev" title="Link spamming" href="Link-spamming.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Search engine threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Big-search-engines.html">Big search engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-hat-SEO.html">Black hat SEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/The-usual-suspects.html">The usual suspects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Documents.html">Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Index.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Search-terms.html">Search terms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Article-spinning.html">Article spinning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Blog-networks.html">Blog networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Cloaking.html">Cloaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Doorway-pages.html">Doorway pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Indirect-link-spamming.html">Indirect link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Link-farms.html">Link farms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Misconfigurations.html">Misconfigurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Redirection.html">Redirection</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Content-spamming.html">Content spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Information-gathering.html">Information gathering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Link-spamming.html">Link spamming</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Man-in-the-Middle attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rank-fraud.html">Rank fraud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Search-engine-poisoning.html">Search engine poisoning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Exposure-to-malware.html">Exposure to malware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Filter-bubbles.html">Filter bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/GDPR-non-compliance.html">GDPR non-compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Information-exposure.html">Information exposure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Filter-bubbles.html">↑ Filter bubbles ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Malware-proliferation.html">↑ Malware proliferation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Oil-of-the-twenty-first-century-and-Competition.html">↑ Oil of the twenty-first century and ↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Spam-content.html">↑ Spam content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Search engine threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Man-in-the-Middle attack</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/attacks/Man-in-the-Middle-attack.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="man-in-the-middle-attack">
+<h1>Man-in-the-Middle attack<a class="headerlink" href="#man-in-the-middle-attack" title="Permalink to this heading"></a></h1>
+<p>Search terms used to query web search engines contain significant amounts of sensitive information and the aggregation and use of these terms constitutes a severe privacy breach (<a class="reference internal" href="../threats/Information-exposure.html"><span class="doc std std-doc">information exposure</span></a>).</p>
+<ul class="simple">
+<li><p>The most impactful attack is based on the common flaw of simply not encrypting sensitive data, or when encrypting is employed, using weak key generation and management, weak algorithms, protocol and ciphers, especially for password hashing storage techniques. For data in transit, server side weaknesses are easy to detect, but hard for data at rest. Failure to encrypt (properly) can compromise all data which require protection as defined by laws or regulations such as the EU GDPR or local privacy laws.</p></li>
+<li><p>A usual suspect can monitor network traffic, for example at an insecure wireless network, downgrade connection from HTTPS to HTTP, intercept requests, and steal the user’s session cookie. The attacker can then replay this cookie and can hijack a user’s (authenticated) session, accessing or modifying the user’s private data or alter all transported data. This means he or she can learn all of the queries without any threat of retribution.</p></li>
+</ul>
+<p>See attack trees in <a class="reference external" href="https://tymyrddin.github.io/attack-trees/docs/network/README.html" title="(in Attack trees)"><span class="xref myst">Network attacks</span></a> and <a class="reference external" href="https://tymyrddin.github.io/attack-trees/docs/application/README.html" title="(in Attack trees)"><span class="xref myst">Application hacking</span></a>.</p>
+<section id="known-mitigations">
+<h2>Known mitigations<a class="headerlink" href="#known-mitigations" title="Permalink to this heading"></a></h2>
+<p>A possible solution has been proposed by Yehuda Lindell and Erez Waisbard, in the form of a highly efficient cryptographic protocol for parties to mix their inputs that guarantees privacy in the presence of malicious adversaries. Unlike the usual setting of mixnets, in this solution the parties themselves carry out the mix. The novelty of the approach is based on the observation that, unlike the setting of voting where mixnets are usually applied, the guarantee of correctness is not necessary for private web search. That is, a malicious participant is allowed to carry out a “denial of service” type attack, causing the search to fail. In return, the expensive zero-knowledge proofs of correctness in every stage of the mix can be omitted, making it faster than the known mixnet solutions.</p>
+</section>
+<section id="data-controller">
+<h2>Data controller<a class="headerlink" href="#data-controller" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Classify data processed, stored or transmitted. Identify which data is sensitive according to privacy laws or regulatory requirements and apply controls as per the classification.</p></li>
+<li><p>Do not store sensitive data unnecessarily in the indexes or dictionaries. Discard it as soon as possible or use PCI DSS compliant tokenisation or even truncation. Data that is not retained cannot be stolen.</p></li>
+<li><p>Encrypt all sensitive data at rest.</p></li>
+<li><p>Use up-to-date and strong standard algorithms, protocols, and keys, and use proper key management.</p></li>
+<li><p>Encrypt all data in transit with secure protocols.</p></li>
+<li><p>Disable caching for responses that contain sensitive data.</p></li>
+<li><p>Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, scrypt, bcrypt or PBKDF2.</p></li>
+<li><p>Audit the effectiveness of configuration and settings.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Link-spamming.html" class="btn btn-neutral float-left" title="Link spamming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Rank-fraud.html" class="btn btn-neutral float-right" title="Rank fraud" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

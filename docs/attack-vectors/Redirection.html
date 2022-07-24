@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirection &mdash; SE Threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Content spamming" href="../attacks/Content-spamming.html" />
+    <link rel="prev" title="Misconfigurations" href="Misconfigurations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Search engine threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Big-search-engines.html">Big search engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-hat-SEO.html">Black hat SEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/The-usual-suspects.html">The usual suspects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Documents.html">Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Index.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Search-terms.html">Search terms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Article-spinning.html">Article spinning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blog-networks.html">Blog networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cloaking.html">Cloaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Doorway-pages.html">Doorway pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Indirect-link-spamming.html">Indirect link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Link-farms.html">Link farms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Misconfigurations.html">Misconfigurations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Redirection</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Content-spamming.html">Content spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Information-gathering.html">Information gathering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Link-spamming.html">Link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Man-in-the-Middle-attack.html">Man-in-the-Middle attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Rank-fraud.html">Rank fraud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Search-engine-poisoning.html">Search engine poisoning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Exposure-to-malware.html">Exposure to malware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Filter-bubbles.html">Filter bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/GDPR-non-compliance.html">GDPR non-compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Information-exposure.html">Information exposure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Filter-bubbles.html">↑ Filter bubbles ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Malware-proliferation.html">↑ Malware proliferation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Oil-of-the-twenty-first-century-and-Competition.html">↑ Oil of the twenty-first century and ↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impacts/Spam-content.html">↑ Spam content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Search engine threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Redirection</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/attack-vectors/Redirection.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="redirection">
+<h1>Redirection<a class="headerlink" href="#redirection" title="Permalink to this heading"></a></h1>
+<p>URL redirection (URL forwarding) makes an object available under more than one address. When a web browser opens a URL that has been redirected, another object with a different address is opened. Domain redirection or domain forwarding is when all pages in a URL domain are redirected to another domain.</p>
+<ul class="simple">
+<li><p>Going through a series of redirects, for example via the 302 Found response code, before landing on the final page is one of many techniques used to provide a platform for a MaaS (Malware-as-a-Service) infrastructure, as it shields the final landing page from automated security crawlers.</p></li>
+<li><p>When a user clicks on the poisoned search results, the request can be redirected to another site by way of:</p>
+<ul>
+<li><p>The PHP header() function, to send a redirect status code back to the user’s web browser.</p></li>
+<li><p>JavaScript or other active content.</p></li>
+<li><p>CSS (Cascading Style Sheet): In CSS, the URL property can be used to set the background. Without parameter to the URL property, like url() instead of url(some url), it will load the parent page again. During the second loading the referer HTTP header is set to the parent URL itself and the other content will be served.</p></li>
+</ul>
+</li>
+</ul>
+<section id="false-positives">
+<h2>False positives<a class="headerlink" href="#false-positives" title="Permalink to this heading"></a></h2>
+<p>There are also many legitimate ways in which redirection is used.</p>
+<ul class="simple">
+<li><p>301 Redirect, or permanent redirect, is not considered malicious behaviour.</p></li>
+<li><p>Post/Redirect/Get to prevent duplicate form submissions.</p></li>
+<li><p>URL shortening</p></li>
+<li><p>Logging outgoing links (privacy issue!)</p></li>
+</ul>
+</section>
+<section id="known-mitigations">
+<h2>Known mitigations<a class="headerlink" href="#known-mitigations" title="Permalink to this heading"></a></h2>
+<p>These mitigations are neither under the control nor the responsibility of search engines.</p>
+<ul class="simple">
+<li><p>Informing searchers that they are redirected only if they click on a search link to an object. If the URL for the site is typed in, there is no redirection to the other site.</p></li>
+<li><p>URL filtering will not be effective because of the use of legitimate websites to redirect visitors.</p></li>
+<li><p>Configuring servers and applications to prevent cross-scripting.</p></li>
+</ul>
+<p>These are.</p>
+<ul class="simple">
+<li><p>Monitoring and securing servers to prevent these from becoming conduits for these attacks.</p></li>
+<li><p>Content inspection and filtering and payload detection to prevent malicious content from reaching the user.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Misconfigurations.html" class="btn btn-neutral float-left" title="Misconfigurations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../attacks/Content-spamming.html" class="btn btn-neutral float-right" title="Content spamming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

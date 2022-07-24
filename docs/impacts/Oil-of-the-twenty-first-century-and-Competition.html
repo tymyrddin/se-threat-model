@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>↑ Oil of the twenty-first century and ↓ Competition &mdash; SE Threat model</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="↑ Spam content" href="Spam-content.html" />
+    <link rel="prev" title="↑ Malware proliferation" href="Malware-proliferation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Search engine threat model
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Adversaries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Big-search-engines.html">Big search engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/Black-hat-SEO.html">Black hat SEO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adversaries/The-usual-suspects.html">The usual suspects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Documents.html">Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Index.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/Search-terms.html">Search terms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attack vectors</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Article-spinning.html">Article spinning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Blog-networks.html">Blog networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Cloaking.html">Cloaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Doorway-pages.html">Doorway pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Indirect-link-spamming.html">Indirect link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Link-farms.html">Link farms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Misconfigurations.html">Misconfigurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attack-vectors/Redirection.html">Redirection</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Attacks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Content-spamming.html">Content spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Information-gathering.html">Information gathering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Link-spamming.html">Link spamming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Man-in-the-Middle-attack.html">Man-in-the-Middle attack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Rank-fraud.html">Rank fraud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../attacks/Search-engine-poisoning.html">Search engine poisoning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Threats</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Exposure-to-malware.html">Exposure to malware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Filter-bubbles.html">Filter bubbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/GDPR-non-compliance.html">GDPR non-compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../threats/Information-exposure.html">Information exposure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Impacts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Filter-bubbles.html">↑ Filter bubbles ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Malware-proliferation.html">↑ Malware proliferation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">↑ Oil of the twenty-first century and ↓ Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Spam-content.html">↑ Spam content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/threat-models/">Overview threat models</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/attack-trees/">Attack trees</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Search engine threat model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>↑ Oil of the twenty-first century and ↓ Competition</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/impacts/Oil-of-the-twenty-first-century-and-Competition.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="oil-of-the-twenty-first-century-and-competition">
+<h1>↑ Oil of the twenty-first century and ↓ Competition<a class="headerlink" href="#oil-of-the-twenty-first-century-and-competition" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p>Personal data generates economic value for the three major parties of the digital market: online platforms (such as search engines, social networking sites, online videos, content sites) and their clients, companies and consumers. <a class="reference external" href="https://www.bruegel.org/2016/01/the-economic-value-of-personal-data-for-online-platforms-firms-and-consumers/">The economic value of personal data for online platforms, firms and consumers,  Cassandra Liem, Georgios Petropoulos and Bruegel, January 14, 2016</a></p></li>
+<li><p>Search engines are intermediaries in a two-way market between users and advertisers. Their huge stocks of data about users and their preferences can help search engines offer better services to all parties. But does this make market entry difficult for new players? And can we see network effects emerging in the search engine market? <a class="reference external" href="https://www.bruegel.org/2016/11/search-engines-big-data-and-network-effects/">Search engines, big data and network effects, Georgios Petropoulos and Bruegel, November 22, 2016</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tymyrddin/symmetrical-bassoon/blob/main/DA-threat-model/threats/New-form-of-consent.md">Ethical concerns about the arrogation and appropriation of user data</a> apparently do not matter much. (New) internet search providers have a choice to make, profit from user data or use a different business model, by which they may make big enemies.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Malware-proliferation.html" class="btn btn-neutral float-left" title="↑ Malware proliferation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Spam-content.html" class="btn btn-neutral float-right" title="↑ Spam content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
